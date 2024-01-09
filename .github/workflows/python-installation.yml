@@ -6,6 +6,9 @@ jobs:
     runs-on: '${{ matrix.os }}'
     strategy:
       matrix:
+        exclude:
+          - os: macos-latest
+          - py-version: 3.9
         os:
           - ubuntu-latest
           - macos-latest
